@@ -5,20 +5,20 @@
 
 var alwaysTrue = true;
 
-function myBarn(petMe) {
+var myBarn = petMe => {
   var animals = {
-    petMe: petMe,
+    petMe: 'dog',
   };
   
   if (alwaysTrue) {
-    var animals = {
+    let animals = {
       petMe: "pig",
     };
-    var greeting = 'This animal should be a pig; it is a: ' + animals.petMe + '.';
+    var greeting = `This animal should be a pig; it is a ${animals.petMe }.`;
     console.log(greeting);
   }
   
-  console.log('This animal should be a dog; it is a: ' + animals.petMe);  // 2
+  console.log(`This animal should be a dog; it is a ${animals.petMe}.`);  // 2
 }
 
 myBarn("dog");
